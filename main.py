@@ -8,7 +8,10 @@ from typing import Dict
 app = FastAPI(
     title="Revenue Intelligence API",
     description="Multi-project Revenue AI Analysis with Standard, Intermediate, and Advanced Agents.",
-    version="1.0"
+    version="1.0",
+    servers=[
+        {"url": "https://ai-revenue-api.onrender.com"}
+    ]
 )
 
 def read_excel_file(file: UploadFile) -> Dict[str, pd.DataFrame]:
